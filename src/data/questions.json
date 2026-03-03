@@ -98,6 +98,50 @@
       ]
     },
     {
+      "id": "access_control_q19",
+      "category": "access_control",
+      "options": [
+        { "id": "opt0", "points": 0 },
+        { "id": "opt1", "points": 25 },
+        { "id": "opt2", "points": 50 },
+        { "id": "opt3", "points": 75 },
+        { "id": "opt4", "points": 100 }
+      ]
+    },
+    {
+      "id": "access_control_q20",
+      "category": "access_control",
+      "options": [
+        { "id": "opt0", "points": 0 },
+        { "id": "opt1", "points": 25 },
+        { "id": "opt2", "points": 50 },
+        { "id": "opt3", "points": 75 },
+        { "id": "opt4", "points": 100 }
+      ]
+    },
+    {
+      "id": "access_control_q19",
+      "category": "access_control",
+      "options": [
+        { "id": "opt0", "points": 0 },
+        { "id": "opt1", "points": 25 },
+        { "id": "opt2", "points": 50 },
+        { "id": "opt3", "points": 75 },
+        { "id": "opt4", "points": 100 }
+      ]
+    },
+    {
+      "id": "access_control_q20",
+      "category": "access_control",
+      "options": [
+        { "id": "opt0", "points": 0 },
+        { "id": "opt1", "points": 25 },
+        { "id": "opt2", "points": 50 },
+        { "id": "opt3", "points": 75 },
+        { "id": "opt4", "points": 100 }
+      ]
+    },
+    {
       "id": "system_data_protection_q22",
       "category": "system_data_protection",
       "options": [
