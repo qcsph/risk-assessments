@@ -6,7 +6,8 @@
     "system_data_protection": "System & Data Protection",
     "monitoring_incident_response": "Monitoring & Incident Response",
     "awareness_training": "Awareness & Training",
-    "vendor_third_party_management": "Vendor & Third-Party Management"
+    "vendor_third_party_management": "Vendor & Third-Party Management",
+    "network_security": "Network Security"
   },
   "questions": {
     "governance_program_management_q1": {
@@ -117,6 +118,31 @@
         }
       }
     },
+    "governance_program_management_q5": {
+      "text": "Is the organization subject to any regulatory compliance requirements (e.g., HIPAA, FERPA, PCI-DSS, SOC 2), and if so, what is the current compliance status?",
+      "options": {
+        "opt0": {
+          "label": "Subject to regulatory requirements; no formal compliance program exists",
+          "risk": "The organization is subject to regulatory requirements but lacks a formal compliance program, creating significant legal, financial, and reputational exposure."
+        },
+        "opt1": {
+          "label": "Subject to regulatory requirements; compliance is partially addressed but gaps exist",
+          "risk": "Partial compliance leaves unresolved control gaps that may result in regulatory findings, fines, or breach liability."
+        },
+        "opt2": {
+          "label": "Subject to regulatory requirements; actively working toward compliance with documented gaps and a remediation plan",
+          "risk": "A documented remediation plan demonstrates intent but unresolved gaps still represent regulatory and business risk."
+        },
+        "opt3": {
+          "label": "Subject to regulatory requirements; fully compliant with evidence of controls, audits, or assessments",
+          "risk": "Demonstrated compliance with supporting evidence reflects mature regulatory program management."
+        },
+        "opt4": {
+          "label": "Not applicable — the organization is not subject to any regulatory compliance requirements",
+          "risk": ""
+        }
+      }
+    },
     "risk_management_q9": {
       "text": "Do you maintain a risk register that tracks identified risks and mitigation actions?",
       "options": {
@@ -143,23 +169,27 @@
       }
     },
     "access_control_q14": {
-      "text": "Is MFA used in your organization?",
+      "text": "Is Multi-Factor Authentication (MFA) enforced across the organization, including email access?",
       "options": {
         "opt0": {
-          "label": "MFA is not enforced for privileged or remote access",
-          "risk": "Absence of multifactor authentication (MFA) leaves credentials highly susceptible to compromise."
+          "label": "MFA is not enforced anywhere",
+          "risk": "The absence of MFA across all systems leaves every user account highly susceptible to credential-based attacks, including phishing and password spray."
         },
         "opt1": {
-          "label": "MFA is enforced for remote access only",
-          "risk": "MFA limited to remote access exposes internal systems to lateral movement attacks."
+          "label": "MFA is enforced for remote access only; email access is not protected",
+          "risk": "Email accounts without MFA are a primary target for phishing and account takeover, enabling business email compromise and lateral movement."
         },
         "opt2": {
-          "label": "MFA is enforced for privileged accounts and remote access",
-          "risk": "MFA for privileged and remote users reduces takeover risk, though high-risk applications may remain unprotected."
+          "label": "MFA is enforced for email and remote access, but not for other applications",
+          "risk": "MFA on email and remote access reduces the most common attack vectors, though unprotected applications remain exposed."
         },
         "opt3": {
-          "label": "MFA is enforced for all privileged/remote access and high-risk apps with conditional access",
-          "risk": "Comprehensive MFA with conditional access protects all high-risk applications and privileged accounts, aligning with access management best practices."
+          "label": "MFA is enforced for email, remote access, and privileged accounts",
+          "risk": "Broad MFA coverage significantly reduces credential compromise risk, though remaining unprotected applications may still be exploited."
+        },
+        "opt4": {
+          "label": "MFA is enforced for all users across email, remote access, privileged accounts, and all applications via conditional access",
+          "risk": "Comprehensive MFA with conditional access enforced across all users and applications represents best practice identity protection."
         }
       }
     },
@@ -398,6 +428,27 @@
         }
       }
     },
+    "monitoring_incident_response_q39": {
+      "text": "Does the organization have a Disaster Recovery Plan (DRP), and is it regularly tested?",
+      "options": {
+        "opt0": {
+          "label": "No Disaster Recovery Plan exists",
+          "risk": "Without a DRP, the organization has no defined process for restoring operations after a disruptive event, risking extended downtime and data loss."
+        },
+        "opt1": {
+          "label": "A DRP exists informally but is not documented or approved",
+          "risk": "Undocumented recovery plans rely on institutional knowledge, creating single points of failure and inconsistent execution under pressure."
+        },
+        "opt2": {
+          "label": "A documented DRP exists but has never been tested",
+          "risk": "An untested DRP provides false confidence — gaps and dependencies are only discovered during an actual disaster."
+        },
+        "opt3": {
+          "label": "A documented DRP exists and is tested at least annually with tracked outcomes and updates",
+          "risk": "A tested and maintained DRP ensures the organization can recover predictably from disruptive events, reflecting operational resilience best practices."
+        }
+      }
+    },
     "monitoring_incident_response_q36": {
       "text": "Is there a documented Incident Response Plan (IRP)?",
       "options": {
@@ -446,6 +497,31 @@
         "opt2": {
           "label": "Annual training with completion tracking",
           "risk": "Annual, tracked security awareness training for all personnel supports a strong security culture and regulatory alignment."
+        }
+      }
+    },
+    "network_security_q1": {
+      "text": "How does the organization manage network segmentation, guest WiFi access, and personal devices connecting to the network?",
+      "options": {
+        "opt0": {
+          "label": "No network segmentation; guest and personal devices share the production network",
+          "risk": "Flat networks with unrestricted access allow a single compromised device to threaten all systems, significantly increasing lateral movement risk."
+        },
+        "opt1": {
+          "label": "Guest WiFi is separated but personal devices connect to the production network without restrictions",
+          "risk": "Unmanaged personal devices on the production network introduce uncontrolled security postures and potential malware pathways into critical systems."
+        },
+        "opt2": {
+          "label": "Guest WiFi is separated and a BYOD policy exists, but personal devices are not technically restricted or enrolled",
+          "risk": "Policies without technical controls cannot prevent non-compliant personal devices from accessing sensitive systems and data."
+        },
+        "opt3": {
+          "label": "Guest WiFi is isolated, personal devices are restricted via NAC or conditional access, and production systems are segmented",
+          "risk": "Network segmentation and access controls limit the blast radius of a compromised device, reducing lateral movement and unauthorized access risk."
+        },
+        "opt4": {
+          "label": "Guest, BYOD, and production networks are fully segmented; personal devices require enrollment and compliance checks before any network access",
+          "risk": "Fully segmented networks with enforced device compliance and enrollment represent network access best practices, minimizing exposure from unmanaged endpoints."
         }
       }
     },

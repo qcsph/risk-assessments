@@ -47,6 +47,17 @@
       ]
     },
     {
+      "id": "governance_program_management_q5",
+      "category": "governance_program_management",
+      "options": [
+        { "id": "opt0", "points": 0 },
+        { "id": "opt1", "points": 33 },
+        { "id": "opt2", "points": 66 },
+        { "id": "opt3", "points": 100 },
+        { "id": "opt4", "points": 100 }
+      ]
+    },
+    {
       "id": "risk_management_q9",
       "category": "risk_management",
       "options": [
@@ -62,9 +73,10 @@
       "category": "access_control",
       "options": [
         { "id": "opt0", "points": 0 },
-        { "id": "opt1", "points": 33 },
-        { "id": "opt2", "points": 67 },
-        { "id": "opt3", "points": 100 }
+        { "id": "opt1", "points": 25 },
+        { "id": "opt2", "points": 50 },
+        { "id": "opt3", "points": 75 },
+        { "id": "opt4", "points": 100 }
       ]
     },
     {
@@ -201,6 +213,16 @@
       ]
     },
     {
+      "id": "monitoring_incident_response_q39",
+      "category": "monitoring_incident_response",
+      "options": [
+        { "id": "opt0", "points": 0 },
+        { "id": "opt1", "points": 33 },
+        { "id": "opt2", "points": 66 },
+        { "id": "opt3", "points": 100 }
+      ]
+    },
+    {
       "id": "monitoring_incident_response_q36",
       "category": "monitoring_incident_response",
       "options": [
@@ -225,6 +247,17 @@
         { "id": "opt0", "points": 0 },
         { "id": "opt1", "points": 50 },
         { "id": "opt2", "points": 100 }
+      ]
+    },
+    {
+      "id": "network_security_q1",
+      "category": "network_security",
+      "options": [
+        { "id": "opt0", "points": 0 },
+        { "id": "opt1", "points": 25 },
+        { "id": "opt2", "points": 50 },
+        { "id": "opt3", "points": 75 },
+        { "id": "opt4", "points": 100 }
       ]
     },
     {
