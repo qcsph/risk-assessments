@@ -226,6 +226,56 @@
         }
       }
     },
+    "access_control_q19": {
+      "text": "How are computer login passwords managed and enforced across the organization?",
+      "options": {
+        "opt0": {
+          "label": "No password policy exists; users set passwords without any requirements",
+          "risk": "The absence of a password policy allows weak, guessable credentials that expose systems to unauthorized access."
+        },
+        "opt1": {
+          "label": "A password policy exists but is documented only — not technically enforced",
+          "risk": "Unenforced policies rely solely on user compliance and cannot prevent weak or trivially guessable passwords."
+        },
+        "opt2": {
+          "label": "Minimum length and complexity requirements are technically enforced via Group Policy or equivalent",
+          "risk": "Technical enforcement reduces weak credentials, but without account lockout or rotation controls, compromised passwords may persist indefinitely."
+        },
+        "opt3": {
+          "label": "Password requirements are enforced with account lockout and a defined expiration or rotation policy",
+          "risk": "Enforced complexity, lockout, and rotation reduce the window of exposure for compromised credentials."
+        },
+        "opt4": {
+          "label": "Password policy aligns to current NIST guidance — long passphrases enforced, lockout enabled, and rotation triggered only on suspected compromise",
+          "risk": "Password controls aligned to NIST SP 800-63B best practices balance security and usability, reducing both credential compromise risk and user friction."
+        }
+      }
+    },
+    "access_control_q20": {
+      "text": "Does the organization use a password manager for storing and generating credentials?",
+      "options": {
+        "opt0": {
+          "label": "No password manager is used; passwords are stored in spreadsheets, sticky notes, or from memory",
+          "risk": "Without a password manager, employees resort to weak, reused, or improperly stored credentials, significantly increasing the risk of account compromise."
+        },
+        "opt1": {
+          "label": "No password manager is used but a written or informal policy discourages password reuse",
+          "risk": "Policies without tooling cannot prevent reuse or weak credentials and provide no visibility into credential hygiene across the organization."
+        },
+        "opt2": {
+          "label": "A password manager is used by some employees informally, without organizational oversight",
+          "risk": "Unsanctioned or partial adoption creates inconsistent credential security and leaves the organization with no visibility into overall password hygiene."
+        },
+        "opt3": {
+          "label": "A password manager is deployed organization-wide but without enforced policies or admin oversight",
+          "risk": "Broad adoption improves credential hygiene but without administrative controls, vault security and usage cannot be audited or enforced."
+        },
+        "opt4": {
+          "label": "A password manager is deployed organization-wide with enforced master password requirements, MFA on the vault, and admin oversight",
+          "risk": "Organization-wide password management with enforced vault security and administrative oversight ensures strong, unique credentials across all systems and provides auditable credential governance."
+        }
+      }
+    },
     "system_data_protection_q22": {
       "text": "Are endpoints protected with centrally managed anti-malware/EDR?",
       "options": {
